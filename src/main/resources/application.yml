@@ -1,0 +1,13 @@
+server:
+  context-path: /ICBCMiddleWare
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: utf-8
+  jmx:
+      default-domain: ICBCMiddleWare
+  http:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
