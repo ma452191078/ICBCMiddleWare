@@ -100,7 +100,6 @@ public class ICBCController {
         PrintWriter out = null;
         BufferedReader in = null;
         String result = "";
-        String requestString = param;
 
         try {
             URL realUrl = new URL(url);
@@ -121,7 +120,7 @@ public class ICBCController {
 
             // 建立输出流，并写入数据
             OutputStream outputStream = httpConn.getOutputStream();
-            outputStream.write(requestString.getBytes());
+            outputStream.write(param.getBytes());
             outputStream.flush();
             // 获得响应状态
             int responseCode = httpConn.getResponseCode();
